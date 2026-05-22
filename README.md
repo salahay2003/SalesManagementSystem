@@ -1,41 +1,81 @@
-# SalesManagementSystem
+# Sales Management System
 
-SalesManagementSystem is a simple .NET 9 application that demonstrates a small sales management domain using Entity Framework for data access. It provides data models, EF Core migrations, and a basic UI for managing sales, customers and products.
+A desktop sales management application built using .NET 9, Windows Forms, and Entity Framework Core.
+
+The system demonstrates a complete sales workflow including customer management, product inventory, orders, payments, and employee relationships using a relational SQL database.
+
+## Technologies Used
+
+- .NET 9
+- Windows Forms
+- Entity Framework Core
+- SQL Server
+- LINQ
+- EF Core Migrations
 
 ## Features
-- Data access implemented with Entity Framework Core
-- Migrations-ready database project
-- Simple CRUD operations for sales-related entities
 
-## Requirements
+- Customer management
+- Product and product line management
+- Order processing
+- Payment tracking
+- Employee and office relationships
+- Database-first relational design
+- CRUD operations for core entities
+
+## Database Design
+
+The project uses a relational database structure with entities such as:
+
+- Customers
+- Orders
+- Products
+- Payments
+- Employees
+- Offices
+
+### ERD Diagram
+
+![Database Diagram](./assets/database-diagram.png)
+
+## Getting Started
+
+### Requirements
+
 - .NET 9 SDK
-- dotnet-ef tools (for migrations)
-- Visual Studio 2022/2026 or VS Code (optional)
+- SQL Server
+- Visual Studio 2022 or later
 
-## Getting started
-1. Clone the repository:
-   git clone https://github.com/salahay2003/SalesManagementSystem.git
+### Setup
 
-2. Open the solution in Visual Studio or use the dotnet CLI.
+```bash
+git clone https://github.com/salahay2003/SalesManagementSystem.git
+cd SalesManagementSystem
+```
 
-3. Update the connection string in your configuration (for example, `appsettings.json` or the project's configuration file) to point to your database server.
+Update your database connection string inside:
 
-4. Install EF tools if you haven't already:
-   dotnet tool install --global dotnet-ef
+```json
+appsettings.json
+```
 
-5. Restore and build the solution:
-   dotnet restore
-   dotnet build
+Run migrations:
 
-6. Create and apply migrations (run from the data project or specify projects explicitly):
-   dotnet ef migrations add InitialCreate
-   dotnet ef database update
+```bash
+dotnet ef database update
+```
 
-7. Run the application from Visual Studio or with:
-   dotnet run --project <StartupProject>
+Run the application:
 
-## Contributing
-Contributions are welcome. Please open issues or pull requests on the repository.
+```bash
+dotnet run
+```
 
-## License
-MIT
+## Project Purpose
+
+This project was built for learning and practicing:
+
+- Entity Framework Core
+- Relational database design
+- Desktop application development
+- CRUD architecture in .NET
